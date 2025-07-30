@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		float lado = -1;
+		while (lado < 0) {
+		    System.out.println("Digite o lado do quadrado: ");
+		    lado = scanner.nextFloat();
+		}
+		float area = lado * lado;
+		System.out.printf("A área do quadrado é %s", area);
+		scanner.close();
+	}
+}
