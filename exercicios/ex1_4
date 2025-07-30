@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Escreva o nome da primeira pessoa: ");
+		String name1 = scanner.next();
+		System.out.println("Escreva a idade da primeira pessoa:");
+		int age1 = scanner.nextInt();
+		System.out.println("Escreva o nome da segunda pessoa: ");
+		String name2 = scanner.next();
+		System.out.println("Escreva a idade da segunda pessoa: ");
+		int age2 = scanner.nextInt();
+		int diff = Math.abs(age1-age2);
+		System.out.printf("A diferença das idades de %s e %s é de %s", name1, name2, diff);
+		
+		scanner.close();
+	}
+}
