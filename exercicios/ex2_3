@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Digite o primeiro número: ");
+		int number1 = scanner.nextInt();
+		int number2 = number1 - 1;
+		while (number2 <= number1) {
+		    System.out.println("Digite um número maior que o primeiro: ");
+		    number2 = scanner.nextInt();
+		}
+		
+		int opcao = -1;
+		while (opcao != 1 && opcao != 0) {
+		    System.out.println("Digite 0 para escolher a opção par ou 1 para a opção ímpar: ");
+		    opcao = scanner.nextInt();
+		}
+		int parity = number2 % 2;
+		int start = number2;
+		if (opcao != parity) {
+		    start = number2 - 1;
+		}
+		
+		if (opcao == 1) {
+		    System.out.printf("Esses são os ímpares entre %s e %s: \n", number1, number2);
+		} else {
+		    System.out.printf("Esses são os pares entre %s e %s: \n", number1, number2);
+		}
+				
+		for (int i = start; i >= number1; i = i - 2) {
+		    System.out.println(i);
+		}
+		
+		scanner.close();
+	}
+}
