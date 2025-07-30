@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		float lado1 = -1;
+		float lado2 = -1;
+		while (lado1 < 0 ) {
+		    System.out.println("Digite o primeiro lado do retângulo: ");
+		    lado1 = scanner.nextFloat();
+		}
+		while (lado2 < 0) {
+		    System.out.println("Digite o segundo lado do retângulo: ");
+		    lado2 = scanner.nextFloat();
+		}
+		float area = lado1 * lado2;
+		System.out.printf("A área do retângulo é %s", area);
+		scanner.close();
+	}
+}
