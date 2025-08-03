@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		var scanner = new Scanner(System.in);
+		System.out.println("Digite um número: ");
+		int n = scanner.nextInt();
+		int m = n - 1;
+		int resto = 0;
+		while (resto == 0){
+    		do {
+    		    System.out.println("Digite um número maior ou igual ao primeiro: ");
+    		    m = scanner.nextInt();
+    		} while (m < n);
+    		resto = m % n;
+    		if (resto == 0){
+    		    System.out.printf("%s é múltiplo de %s. \n", m, n);
+    		}
+		}
+		scanner.close();
+	}
+}
